@@ -5,5 +5,5 @@ navigation: false
 ---
 
 ::TtEmbed
-Content
+I updated the content inside a component
 ::
