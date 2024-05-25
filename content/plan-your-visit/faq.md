@@ -3,8 +3,6 @@ title: FAQ
 description: Frequently Asked Questions
 ---
 
-# Frequently Asked Questions
-
 ## Big Top Theatre FAQs 
 
 **Where will the Big Top Theatre be?**

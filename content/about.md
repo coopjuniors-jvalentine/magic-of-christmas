@@ -4,7 +4,6 @@ description: "Join us as we whisk you away on a captivating adventure filled
   with stunning visual surprises and mesmerising performances in this brand new
   Big Top spectacle, perfect for all ages! "
 ---
-# About
 
 ## The Show
 

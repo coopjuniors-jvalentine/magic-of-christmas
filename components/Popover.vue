@@ -1,7 +1,7 @@
 <template>
   <HeadlessPopover class="relative">
     <HeadlessPopoverButton
-      class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-white"
+      class="inline-flex items-center gap-x-1 text-sm leading-6 text-white"
     >
       <span>{{ item.title }}</span>
       <svg
@@ -30,13 +30,13 @@
         class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4"
       >
         <div
-          class="w-screen max-w-sm flex-auto overflow-hidden rounded-3xl bg-m-blue-900 text-sm leading-6 shadow-lg ring-1 ring-white/15"
+          class="w-screen max-w-sm flex-auto overflow-hidden rounded-lg bg-m-blue-900 text-sm leading-6 shadow-lg ring-1 ring-white/15"
         >
           <div class="p-4">
             <div
               v-for="child in item.children"
               :key="child._id"
-              class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-m-blue-800"
+              class="group relative flex gap-x-6 rounded-md p-4 hover:bg-m-blue-600"
             >
               <div>
                 <a :href="child._path" class="font-semibold text-white">

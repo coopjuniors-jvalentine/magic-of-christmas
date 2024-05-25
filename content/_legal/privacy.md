@@ -2,4 +2,4 @@
 title: Privacy
 ---
 
-# Privacy is important
+Privacy is important

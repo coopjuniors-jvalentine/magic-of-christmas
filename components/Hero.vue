@@ -6,8 +6,9 @@
       class="z-20 max-w-3xl px-8 text-center text-pretty mx-auto pt-20 pb-48 flex flex-col items-center justify-center"
     >
       <img
-        class="w-full max-w-2xl"
-        src="https://www.magic-of-christmas.co.uk/wp-content/uploads/2023/12/MAgic-of-Christmas-LANDSCAPE-TITLE_web.png"
+        :class="logoClass"
+        class="w-full"
+        src="/img/MagicOfChristmas-3D.png"
         alt=""
       />
       <h2
@@ -104,19 +105,36 @@
   </div>
 </template>
 
-<script setup>
-import * as HERO_SETTINGS from '/content/site-settings/hero.json'
+<script>
+import * as HERO_SETTINGS from '/content/_site-settings/hero.json'
 
-defineProps({
-  subheading: {
-    type: String,
-    default:
-      HERO_SETTINGS.subheading ||
-      'Journey to another world where your Christmas wishes come true!',
+export default {
+  props: {
+    subheading: {
+      type: String,
+      default:
+        HERO_SETTINGS.subheading ||
+        'Journey to another world where your Christmas wishes come true!',
+    },
+    enableButton: {
+      type: Boolean,
+      default: HERO_SETTINGS.enableButton || true,
+    },
+    logoSize: {
+      type: String,
+      default: 'large',
+    },
   },
-  enableButton: {
-    type: Boolean,
-    default: HERO_SETTINGS.enableButton || true,
+  computed: {
+    logoClass() {
+      if (this.logoSize === 'small') {
+        return 'max-w-lg'
+      } else if (this.logoSize === 'medium') {
+        return 'max-w-xl'
+      } else {
+        return 'max-w-2xl'
+      }
+    },
   },
-})
+}
 </script>

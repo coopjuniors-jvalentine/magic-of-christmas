@@ -11,12 +11,12 @@ media_folder: public/img
 public_folder: /img
 
 collections:
-  - label: 'Component Settings'
-    name: 'settings'
+  - name: 'settings'
+    label: 'Component Settings'
     files:
       - label: 'Hero Settings'
         name: 'hero'
-        file: 'content/hero/settings.json'
+        file: 'content/_site-settings/hero.json'
         format: 'json'
         editor:
           preview: false
@@ -33,9 +33,9 @@ collections:
               widget: boolean,
               hint: 'This is used to turn the additional book now button on or off',
             }
-  - name: 'plan-your-visit'
-    label: 'Plan Your Visit'
-    folder: 'content/3.plan-your-visit'
+  - name: 'Pages'
+    label: 'Pages'
+    folder: 'content'
     create: true
     format: 'frontmatter'
     slug: '{{slug}}'
@@ -48,9 +48,25 @@ collections:
           required: false,
         }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
-  - name: 'Pages'
-    label: 'Pages'
-    folder: 'content'
+
+  - name: 'plan-your-visit'
+    label: 'Plan Your Visit'
+    folder: 'content/plan-your-visit'
+    create: true
+    format: 'frontmatter'
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'string',
+          required: false,
+        }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+  - name: 'legal'
+    label: 'Legal'
+    folder: 'content/_legal'
     create: true
     format: 'frontmatter'
     slug: '{{slug}}'

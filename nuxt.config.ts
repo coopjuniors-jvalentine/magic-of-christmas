@@ -16,23 +16,19 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    '@nuxt/content',
-    [
-      '@nuxtjs/google-fonts',
+  modules: ['@nuxt/content', [
+    '@nuxtjs/google-fonts',
 
-      {
-        families: {
-          'Libre+Baskerville': true,
-          'Playfair+Display': true,
-        },
+    {
+      families: {
+        'Libre+Baskerville': true,
+        'Playfair+Display': true,
       },
-    ],
-    [
-      'nuxt-headlessui',
-      {
-        prefix: 'Headless',
-      },
-    ],
-  ],
+    },
+  ], [
+    'nuxt-headlessui',
+    {
+      prefix: 'Headless',
+    },
+  ], "@nuxt/image"],
 })

@@ -1,8 +1,46 @@
 <template>
   <div class="relative">
-    <main class="font-serif py-48 px-8 prose prose-invert max-w-prose mx-auto lg:prose-lg">
-      <ContentDoc />
-    </main>
+    <ContentDoc>
+      <template v-slot="{ doc }">
+        <div class="font-serif py-48 px-8 max-w-prose mx-auto">
+          <h1
+            class="text-center text-3xl tracking-tight font-display text-white sm:text-5xl"
+          >
+            {{ doc.title }}
+          </h1>
+          <article class="prose prose-invert lg:prose-lg">
+            <ContentRenderer :value="doc" />
+          </article>
+        </div>
+      </template>
+      <template #not-found>
+        <main
+          class="grid font-serif min-h-screen place-items-center px-6 py-24 sm:py-32 lg:px-8"
+        >
+          <div class="text-center">
+            <p class="text-base font-semibold text-m-purple-400">404</p>
+            <h1
+              class="mt-4 text-3xl tracking-tight font-display text-white sm:text-5xl"
+            >
+              Page not found
+            </h1>
+            <p class="mt-6 text-base leading-7 text-m-blue-200">
+              Sorry, we couldn’t find the page you’re looking for.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <NuxtLink
+                to="/"
+                class="rounded-md bg-m-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-m-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-500"
+                >Go back home</NuxtLink
+              >
+            </div>
+          </div>
+        </main>
+      </template>
+      <template #empty>
+        <h1>Document not found</h1>
+      </template>
+    </ContentDoc>
     <div class="pointer-events-none absolute inset-0">
       <div class="relative h-full w-full">
         <div
