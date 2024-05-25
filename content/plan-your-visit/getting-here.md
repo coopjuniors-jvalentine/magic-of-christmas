@@ -1,6 +1,6 @@
 ---
-title: Getting Here
-description: Information about the Magic of Christmas event, the venue and ticketing.
+title: 'Getting Here'
+description: 'Information about the Magic of Christmas event, the venue and ticketing.'
 ---
 
 **Journey to another world where your Christmas wishes come true!**
@@ -24,4 +24,4 @@ Ipswich station is a 15 minute taxi ride with services to Norwich, London, the E
 
 ### By Taxi 
 
-Please advise drivers to use the Felixstowe Road entrance to Trinity Park and follow the signs to the car park and Big Top Theatre. 
+Please advise drivers to use the Felixstowe Road entrance to Trinity Park and follow the signs to the car park and Big Top Theatre.

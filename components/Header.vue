@@ -38,9 +38,9 @@
       <div class="hidden lg:flex lg:gap-x-12">
         <div v-for="item in navigation">
           <Popover v-if="item.children" :item="item"></Popover>
-          <a v-else :href="item._path" class="text-sm leading-6 text-white">{{
+          <NuxtLink v-else :to="item._path" class="text-sm leading-6 text-white">{{
             item.title
-          }}</a>
+          }}</NuxtLink>
         </div>
       </div>
     </nav>
@@ -88,18 +88,18 @@
                   <span class="text-xs block border-t border-m-blue-600 mt-6 mb-3 pt-6 font-semibold leading-6 text-m-blue-300">{{
                     item.title
                   }}</span>
-                  <a
+                  <NuxtLink
                     v-for="child in item.children"
-                    :href="child._path"
+                    :to="child._path"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-m-blue-700"
-                    >{{ child.title }}</a
+                    >{{ child.title }}</NuxtLink
                   >
                 </div>
-                <a
+                <NuxtLink
                   v-else
-                  :href="item._path"
+                  :to="item._path"
                   class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-m-blue-700"
-                  >{{ item.title }}</a
+                  >{{ item.title }}</NuxtLink
                 >
               </div>
 
@@ -135,8 +135,8 @@ export default {
   computed: {
     navClass() {
       return {
-        'bg-m-blue-900/0': this.isTransparent,
-        'bg-m-blue-900/50 backdrop-blur-lg': !this.isTransparent,
+        '': this.isTransparent,
+        'backdrop-blur-lg': !this.isTransparent,
       }
     },
   },
@@ -148,6 +148,7 @@ export default {
   beforeDestroy() {
     if (this.initialTransparent) {
       window.removeEventListener('scroll', this.handleScroll)
+      this.isMenuOpen = false
     }
   },
   methods: {

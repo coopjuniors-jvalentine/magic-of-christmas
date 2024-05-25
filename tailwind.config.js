@@ -98,6 +98,18 @@ export default {
           },
         },
       },
+      typography: theme => ({
+        DEFAULT: {
+          css: {
+            'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a': {
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'none',
+              },
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [require('@tailwindcss/typography')],

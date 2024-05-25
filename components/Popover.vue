@@ -36,13 +36,13 @@
             <div
               v-for="child in item.children"
               :key="child._id"
-              class="group relative flex gap-x-6 rounded-md p-4 hover:bg-m-blue-600"
+              class="group relative flex gap-x-6 rounded-md p-4 hover:bg-m-blue-800"
             >
               <div>
-                <a :href="child._path" class="font-semibold text-white">
+                <NuxtLink :to="child._path" class="text-white">
                   {{ child.title }}
                   <span class="absolute inset-0" />
-                </a>
+                </NuxtLink>
               </div>
             </div>
           </div>

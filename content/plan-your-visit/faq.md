@@ -1,6 +1,6 @@
 ---
-title: FAQ
-description: Frequently Asked Questions
+title: 'Frequently Asked Questions'
+description: 'Frequently Asked Questions'
 ---
 
 ## Big Top Theatre FAQs 

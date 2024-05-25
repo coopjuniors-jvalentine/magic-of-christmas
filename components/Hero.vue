@@ -106,7 +106,7 @@
 </template>
 
 <script>
-import * as HERO_SETTINGS from '/content/_site-settings/hero.json'
+import * as HERO_SETTINGS from '/content/site-settings/hero.json'
 
 export default {
   props: {

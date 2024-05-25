@@ -6,13 +6,34 @@
       <div
         class="flex flex-wrap items-center justify-center space-x-4 md:space-x-8 space-y-4"
       >
-        <img class="max-h-16 md:max-h-20 lg:max-h-24" src="/img/MagicOfChristmas.svg" />
-        <img class="max-h-16 md:max-h-20 lg:max-h-24" src="/img/CoopJuniors.svg" />
+        <img
+          class="max-h-16 md:max-h-20 lg:max-h-24"
+          src="/img/MagicOfChristmas.svg"
+        />
+        <img
+          class="max-h-16 md:max-h-20 lg:max-h-24"
+          src="/img/CoopJuniors.svg"
+        />
         <img class="max-h-16 md:max-h-20 lg:max-h-24" src="/img/EOECoop.svg" />
       </div>
 
       <div
         class="flex mt-12 text-sm text-m-blue-300 items-center justify-center space-x-8"
+      >
+        <div v-for="item in navigation">
+          <NuxtLink v-if="!item.children" :to="item._path">{{
+            item.title
+          }}</NuxtLink>
+          <div v-else class="flex items-center justify-center space-x-8">
+            <NuxtLink v-for="child in item.children" :to="child._path">{{
+              child.title
+            }}</NuxtLink>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex mt-6 text-xs text-m-blue-300 items-center justify-center space-x-8"
       >
         <NuxtLink to="/legal/cookies">Cookies</NuxtLink>
         <NuxtLink to="/legal/privacy">Privacy</NuxtLink>
@@ -21,11 +42,11 @@
         >
       </div>
 
-
-
-      <div class="mt-12 pt-12 border-t border-m-blue-600 md:flex md:items-center md:justify-between lg:px-8">
+      <div
+        class="mt-12 pt-12 border-t border-m-blue-600 md:flex md:items-center md:justify-between lg:px-8"
+      >
         <div class="flex justify-center space-x-6 md:order-2">
-          <a href="#" class="text-m-blue-400 hover:text-m-blue-300">
+          <a href="#" class="text-m-blue-300 hover:text-m-blue-200">
             <span class="sr-only">Facebook</span>
             <svg
               class="h-6 w-6"
@@ -41,7 +62,7 @@
             </svg>
           </a>
 
-          <a href="#" class="text-m-blue-400 hover:text-m-blue-300">
+          <a href="#" class="text-m-blue-300 hover:text-m-blue-200">
             <span class="sr-only">X</span>
             <svg
               class="h-6 w-6"
@@ -64,3 +85,9 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+const { data: navigation } = await useAsyncData('navigation', () =>
+  fetchContentNavigation(),
+)
+</script>

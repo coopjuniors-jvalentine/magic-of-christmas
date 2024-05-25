@@ -16,7 +16,7 @@ collections:
     files:
       - label: 'Hero Settings'
         name: 'hero'
-        file: 'content/_site-settings/hero.json'
+        file: 'content/site-settings/hero.json'
         format: 'json'
         editor:
           preview: false
@@ -66,7 +66,7 @@ collections:
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
   - name: 'legal'
     label: 'Legal'
-    folder: 'content/_legal'
+    folder: 'content/legal'
     create: true
     format: 'frontmatter'
     slug: '{{slug}}'
