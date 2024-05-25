@@ -7,7 +7,7 @@
       <div class="flex lg:flex-1">
         <NuxtLink
           to="/buy-tickets"
-          class="rounded-md bg-indigo-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          class="rounded-md bg-m-blue-400 px-3 py-2 text-sm text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400"
         >
           Buy Tickets
         </NuxtLink>
@@ -16,7 +16,7 @@
         <button
           @click="openMenu"
           type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-m-blue-300"
         >
           <span class="sr-only">Open main menu</span>
           <svg
@@ -49,19 +49,19 @@
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div class="fixed inset-0 z-10"></div>
       <div
-        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
+        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-m-blue-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/15"
       >
         <div class="flex items-center justify-between">
           <button
             type="button"
-            class="rounded-md bg-indigo-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            class="rounded-md bg-m-blue-600 px-3 py-2 text-sm text-white shadow-sm hover:bg-m-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-600"
           >
             Buy Tickets
           </button>
           <button
             @click="closeMenu"
             type="button"
-            class="-m-2.5 rounded-md p-2.5 text-gray-400"
+            class="-m-2.5 rounded-md p-2.5 text-m-blue-300"
           >
             <span class="sr-only">Close menu</span>
             <svg
@@ -81,24 +81,24 @@
           </button>
         </div>
         <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/25">
+          <div class="-my-6 divide-y divide-m-blue-500/25">
             <div class="space-y-2 py-6">
               <div v-for="item in navigation">
                 <div v-if="item.children">
-                  <span class="text-xs block border-t border-gray-600 mt-6 mb-3 pt-6 font-semibold leading-6 text-gray-400">{{
+                  <span class="text-xs block border-t border-m-blue-600 mt-6 mb-3 pt-6 font-semibold leading-6 text-m-blue-300">{{
                     item.title
                   }}</span>
                   <a
                     v-for="child in item.children"
                     :href="child._path"
-                    class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-gray-800"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-m-blue-700"
                     >{{ child.title }}</a
                   >
                 </div>
                 <a
                   v-else
                   :href="item._path"
-                  class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-gray-800"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base leading-7 text-white hover:bg-m-blue-700"
                   >{{ item.title }}</a
                 >
               </div>
@@ -135,8 +135,8 @@ export default {
   computed: {
     navClass() {
       return {
-        'bg-gray-900/0': this.isTransparent,
-        'bg-gray-900/70 backdrop-blur-lg': !this.isTransparent,
+        'bg-m-blue-900/0': this.isTransparent,
+        'bg-m-blue-900/50 backdrop-blur-lg': !this.isTransparent,
       }
     },
   },

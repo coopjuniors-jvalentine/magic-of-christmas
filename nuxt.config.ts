@@ -24,6 +24,7 @@ export default defineNuxtConfig({
       {
         families: {
           'Libre+Baskerville': true,
+          'Playfair+Display': true,
         },
       },
     ],

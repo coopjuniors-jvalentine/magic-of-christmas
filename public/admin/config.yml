@@ -11,6 +11,28 @@ media_folder: public/img
 public_folder: /img
 
 collections:
+  - label: 'Component Settings'
+    name: 'settings'
+    files:
+      - label: 'Hero Settings'
+        name: 'hero'
+        file: 'content/hero/settings.json'
+        format: 'json'
+        editor:
+          preview: false
+        fields:
+          - {
+              label: Sub Heading,
+              name: subheading,
+              widget: string,
+              hint: 'This is used for the text under the logo',
+            }
+          - {
+              label: Enable Button,
+              name: enableButton,
+              widget: boolean,
+              hint: 'This is used to turn the additional book now button on or off',
+            }
   - name: 'plan-your-visit'
     label: 'Plan Your Visit'
     folder: 'content/3.plan-your-visit'
