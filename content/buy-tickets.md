@@ -7,5 +7,5 @@ navigation: false
 # Hello I smell like butts
 
 ::TtEmbed
-Content
+I updated the content inside a component
 ::
