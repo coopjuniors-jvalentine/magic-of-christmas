@@ -1,5 +1,5 @@
 <template>
-  <header :class="navClass" class="fixed w-full z-50 font-serif">
+  <header :class="navClass" class="fixed top-0 w-full z-50 font-serif">
     <nav
       class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       aria-label="Global"
