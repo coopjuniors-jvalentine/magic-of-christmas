@@ -9,12 +9,18 @@
         <img
           class="max-h-16 md:max-h-20 lg:max-h-24"
           src="/img/MagicOfChristmas.svg"
+          alt="Magic of Christmas"
         />
         <img
           class="max-h-16 md:max-h-20 lg:max-h-24"
           src="/img/CoopJuniors.svg"
+          alt="Co-op Juniors"
         />
-        <img class="max-h-16 md:max-h-20 lg:max-h-24" src="/img/EOECoop.svg" />
+        <img
+          class="max-h-16 md:max-h-20 lg:max-h-24"
+          src="/img/EOECoop.svg"
+          alt="East of England Co-operative Society"
+        />
       </div>
 
       <div

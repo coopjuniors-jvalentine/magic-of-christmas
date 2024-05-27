@@ -8,11 +8,16 @@
           <div
             class="relative overflow-hidden rounded-3xl w-full bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:px-8 lg:pb-8 xl:px-10 xl:pb-10"
           >
-            <img
+            <NuxtImg
               class="absolute inset-0 h-full w-full object-cover"
-              src="https://www.trinityparkevents.co.uk/utils/imagevariation/345/605914950c4bc82c94e488335b570858/image.jpg"
-              alt=""
+              src="img/TrinityPark.jpg"
+              width="640"
+              height="360"
+              :placeholder="[64, 36, 75, 5]"
+              format="webp"
+              alt="Arial view of Trinity Park"
             />
+
             <div
               class="absolute bottom-0 left-0 h-2/3 w-full bg-gradient-to-t from-m-blue-900/80 to-transparent"
             ></div>
@@ -36,7 +41,7 @@
               Find Us
             </h1>
             <p class="mt-6 text-xl text-pretty leading-8 text-m-blue-200">
-              <ContentSlot :use="$slots.info" unwrap="p"/>
+              <ContentSlot :use="$slots.info" unwrap="p" />
             </p>
             <div class="mt-10 flex items-center gap-x-6">
               <a
@@ -44,7 +49,9 @@
                 class="rounded-md bg-m-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400"
                 >Open on Google Maps</a
               >
-              <a href="https://what3words.com/remaining.providing.clouds" class="text-sm font-semibold leading-6 text-m-blue-200"
+              <a
+                href="https://what3words.com/remaining.providing.clouds"
+                class="text-sm font-semibold leading-6 text-m-blue-200"
                 >What3Words <span aria-hidden="true">→</span></a
               >
             </div>

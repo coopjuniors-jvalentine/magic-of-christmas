@@ -16,9 +16,11 @@
                 <p
                   class="font-serif text-pretty mt-6 text-xl leading-8 text-m-blue-100 sm:max-w-md lg:max-w-none"
                 >
-                <ContentSlot :use="$slots.lead" unwrap="p" />
+                  <ContentSlot :use="$slots.lead" unwrap="p" />
                 </p>
-                <div class="mt-6 font-serif prose prose-invert lg:prose-lg relative max-w-full sm:max-w-md lg:max-w-none">
+                <div
+                  class="mt-6 font-serif prose prose-invert lg:prose-lg relative max-w-full sm:max-w-md lg:max-w-none"
+                >
                   <ContentSlot :use="$slots.about" />
                 </div>
               </div>
@@ -29,11 +31,16 @@
                   class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80"
                 >
                   <div class="relative">
-                    <img
-                      :src="image1"
-                      alt=""
+                    <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
+                      :src="image1"
+                      width="176"
+                      height="264"
+                      :placeholder="[17, 26, 75, 5]"
+                      format="webp"
+                      alt=""
                     />
+
                     <div
                       class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-white/15"
                     />
@@ -43,20 +50,28 @@
                   class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36"
                 >
                   <div class="relative">
-                    <img
-                      :src="image2"
-                      alt=""
+                    <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
+                      :src="image2"
+                      width="176"
+                      height="264"
+                      :placeholder="[17, 26, 75, 5]"
+                      format="webp"
+                      alt=""
                     />
                     <div
                       class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-white/15"
                     />
                   </div>
                   <div class="relative">
-                    <img
-                      :src="image3"
-                      alt=""
+                    <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
+                      :src="image3"
+                      width="176"
+                      height="264"
+                      :placeholder="[17, 26, 75, 5]"
+                      format="webp"
+                      alt=""
                     />
                     <div
                       class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-white/15"
@@ -65,20 +80,28 @@
                 </div>
                 <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                   <div class="relative">
-                    <img
-                      :src="image4"
-                      alt=""
+                    <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
+                      :src="image4"
+                      width="176"
+                      height="264"
+                      :placeholder="[17, 26, 75, 5]"
+                      format="webp"
+                      alt=""
                     />
                     <div
                       class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-white/15"
                     />
                   </div>
                   <div class="relative">
-                    <img
-                      :src="image5"
-                      alt=""
+                    <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
+                      :src="image5"
+                      width="176"
+                      height="264"
+                      :placeholder="[17, 26, 75, 5]"
+                      format="webp"
+                      alt=""
                     />
                     <div
                       class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-white/15"

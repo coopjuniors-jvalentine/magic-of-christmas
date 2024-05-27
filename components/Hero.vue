@@ -5,11 +5,15 @@
     <div
       class="z-20 max-w-3xl px-8 text-center text-pretty mx-auto pt-20 pb-48 flex flex-col items-center justify-center"
     >
-      <img
+      <NuxtImg
         :class="logoClass"
         class="w-full"
         src="/img/MagicOfChristmas-3D.png"
-        alt=""
+        width="1000"
+        height="693"
+        :placeholder="[200, 140, 75, 5]"
+        format="webp"
+        alt="The Magic of Christmas"
       />
       <h2
         class="font-display mt-12 text-3xl font-medium tracking-tight text-m-blue-50 sm:text-4xl"
