@@ -95,7 +95,7 @@ collections:
             }
           - {
               label: 'Image 4',
-              name: 'aboutImg5',
+              name: 'aboutImg4',
               widget: 'image',
               required: true,
             }
