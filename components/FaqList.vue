@@ -93,7 +93,7 @@ import faqs from '~/content/plan-your-visit/_faq-items.json'
 export default {
   data() {
     return {
-      faqs,
+      faqs: faqs.questions,
       selectedCategory: '',
       openedIndices: [],
     }
