@@ -5,11 +5,11 @@ description: "Join us as we whisk you away on a captivating adventure filled
   Big Top spectacle, perfect for all ages! "
 aboutHeading: "Join us as we whisk you away on a captivating adventure"
 aboutLead: "Filled with stunning visual surprises and mesmerising performances, this brand new Big Top spectacle is perfect for all ages!"
-aboutImg1: https://coopjuniors.co.uk/wp-content/uploads/2023/12/U0A9132.jpg
-aboutImg2: https://coopjuniors.co.uk/wp-content/uploads/2023/12/U0A9230-1920x1280.jpg
-aboutImg3: https://coopjuniors.co.uk/wp-content/uploads/2023/12/U0A9579-1920x1280.jpg
-aboutImg4: https://coopjuniors.co.uk/wp-content/uploads/2023/12/U0A8842-1280x1920.jpg
-aboutImg5: https://coopjuniors.co.uk/wp-content/uploads/2023/12/283-1280x1920.jpg
+aboutImg1: /img/imgage-1.jpg
+aboutImg2: /img/imgage-2.jpg
+aboutImg3: /img/imgage-3.jpg
+aboutImg4: /img/imgage-4.jpg
+aboutImg5: /img/imgage-5.jpg
 ---
 
 ::AboutHero{:heading="aboutHeading" :lead="aboutLead" :image1="aboutImg1" :image2="aboutImg2" :image3="aboutImg3" :image4="aboutImg4" :image5="aboutImg5"}

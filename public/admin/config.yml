@@ -35,8 +35,8 @@ collections:
               widget: boolean,
               hint: 'This is used to turn the additional book now button on or off',
             }
-  - name: 'faq'
-    label: 'Frequently Asked Questions'
+  - name: 'custom'
+    label: 'Custom Pages'
     files:
       - label: 'FAQs'
         name: 'faqs'
@@ -57,6 +57,18 @@ collections:
             }
           - { label: Question, name: question, widget: string }
           - { label: Answer, name: answer, widget: string }
+      - label: 'About'
+        name: 'about'
+        file: 'content/about.md'
+        format: 'frontmatter'
+        fields:
+          - { label: Heading, name: aboutHeading, widget: string }
+          - { label: Lead, name: aboutLead, widget: string }
+          - { label: Image1, name: aboutImage1, widget: image }
+          - { label: Image2, name: aboutImage2, widget: image }
+          - { label: Image3, name: aboutImage3, widget: image }
+          - { label: Image4, name: aboutImage4, widget: image }
+          - { label: Image5, name: aboutImage5, widget: image }
   - name: 'Pages'
     label: 'Pages'
     folder: 'content'
