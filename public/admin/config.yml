@@ -35,6 +35,28 @@ collections:
               widget: boolean,
               hint: 'This is used to turn the additional book now button on or off',
             }
+  - name: 'faq'
+    label: 'Frequently Asked Questions'
+    files:
+      - label: 'FAQs'
+        name: 'faqs'
+        file: 'content/plan-your-visit/_faq-items.json'
+        format: 'json'
+        editor:
+          preview: false
+        widget: 'list'
+        allow_add: true
+        summary: '{{fields.category}} - {{fields.question}}'
+        fields:
+          - {
+              label: Category,
+              name: category,
+              widget: select,
+              options: ['Big Top Theatre', 'Performance', 'Tickets'],
+              default: 'Big Top Theatre',
+            }
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: string }
   - name: 'Pages'
     label: 'Pages'
     folder: 'content'

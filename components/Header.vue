@@ -38,9 +38,12 @@
       <div class="hidden lg:flex lg:gap-x-12">
         <div v-for="item in navigation">
           <Popover v-if="item.children" :item="item"></Popover>
-          <NuxtLink v-else :to="item._path" class="text-sm leading-6 text-white">{{
-            item.title
-          }}</NuxtLink>
+          <NuxtLink
+            v-else
+            :to="item._path"
+            class="text-sm leading-6 text-white"
+            >{{ item.title }}</NuxtLink
+          >
         </div>
       </div>
     </nav>
@@ -85,9 +88,10 @@
             <div class="space-y-2 py-6">
               <div v-for="item in navigation">
                 <div v-if="item.children">
-                  <span class="text-xs block border-t border-m-blue-600 mt-6 mb-3 pt-6 font-semibold leading-6 text-m-blue-300">{{
-                    item.title
-                  }}</span>
+                  <span
+                    class="text-xs block border-t border-m-blue-600 mt-6 mb-3 pt-6 font-semibold leading-6 text-m-blue-300"
+                    >{{ item.title }}</span
+                  >
                   <NuxtLink
                     v-for="child in item.children"
                     :to="child._path"
@@ -102,8 +106,6 @@
                   >{{ item.title }}</NuxtLink
                 >
               </div>
-
-              
             </div>
           </div>
         </div>
@@ -168,6 +170,11 @@ export default {
       } else {
         this.isTransparent = true
       }
+    },
+  },
+  watch: {
+    $route() {
+      this.isMenuOpen = false
     },
   },
 }

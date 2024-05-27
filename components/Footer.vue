@@ -18,13 +18,16 @@
       </div>
 
       <div
-        class="flex mt-12 text-sm text-m-blue-300 items-center justify-center space-x-8"
+        class="flex flex-col sm:flex-row flex-wrap mt-12 text-sm text-m-blue-300 items-center justify-center space-x-0 space-y-4 sm:space-y-0 sm:space-x-8"
       >
         <div v-for="item in navigation">
           <NuxtLink v-if="!item.children" :to="item._path">{{
             item.title
           }}</NuxtLink>
-          <div v-else class="flex items-center justify-center space-x-8">
+          <div
+            v-else
+            class="flex flex-col sm:flex-row flex-wrap items-center justify-center space-x-0 space-y-4 sm:space-y-0 sm:space-x-8"
+          >
             <NuxtLink v-for="child in item.children" :to="child._path">{{
               child.title
             }}</NuxtLink>

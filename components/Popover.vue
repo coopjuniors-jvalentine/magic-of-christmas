@@ -1,6 +1,6 @@
 <template>
   <HeadlessPopover class="relative">
-    <HeadlessPopoverButton
+    <HeadlessPopoverButton @click="showPopover = !showPopover"
       class="inline-flex items-center gap-x-1 text-sm leading-6 text-white"
     >
       <span>{{ item.title }}</span>
@@ -27,6 +27,8 @@
       leave-to-class="opacity-0 translate-y-1"
     >
       <HeadlessPopoverPanel
+        static
+        v-if="showPopover"
         class="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4"
       >
         <div
@@ -38,12 +40,12 @@
               :key="child._id"
               class="group relative flex gap-x-6 rounded-md p-4 hover:bg-m-blue-800"
             >
-              <div>
+              <HeadlessPopoverButton>
                 <NuxtLink :to="child._path" class="text-white">
                   {{ child.title }}
                   <span class="absolute inset-0" />
                 </NuxtLink>
-              </div>
+              </HeadlessPopoverButton>
             </div>
           </div>
         </div>
@@ -58,6 +60,16 @@ export default {
     item: {
       type: Object,
       required: true,
+    },
+  },
+  data() {
+    return {
+      showPopover: false,
+    }
+  },
+  watch: {
+    $route() {
+      this.showPopover = false
     },
   },
 }
