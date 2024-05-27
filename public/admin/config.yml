@@ -13,8 +13,8 @@ media_folder: public/img
 public_folder: /img
 
 collections:
-  - name: 'settings'
-    label: 'Component Settings'
+  - name: 'custom'
+    label: 'Custom Content'
     files:
       - label: 'Hero Settings'
         name: 'hero'
@@ -28,6 +28,7 @@ collections:
               name: subheading,
               widget: string,
               hint: 'This is used for the text under the logo',
+              required: true,
             }
           - {
               label: Enable Button,
@@ -35,9 +36,6 @@ collections:
               widget: boolean,
               hint: 'This is used to turn the additional book now button on or off',
             }
-  - name: 'custom'
-    label: 'Custom Pages'
-    files:
       - label: 'FAQs'
         name: 'faqs'
         file: 'content/plan-your-visit/_faq-items.json'
@@ -46,32 +44,80 @@ collections:
         allow_add: true
         summary: '{{fields.category}} - {{fields.question}}'
         fields:
-          - {
-              label: Category,
-              name: category,
-              widget: select,
-              options: ['Big Top Theatre', 'Performance', 'Tickets'],
-              default: 'Big Top Theatre',
-            }
-          - { label: Question, name: question, widget: string }
-          - { label: Answer, name: answer, widget: string }
+          - label: Frequently Asked Question
+            name: frequently-asked-question
+            widget: object
+            fields:
+              - {
+                  label: Category,
+                  name: category,
+                  widget: select,
+                  options: ['Big Top Theatre', 'Performance', 'Tickets'],
+                  default: 'Big Top Theatre',
+                  required: true,
+                }
+              - {
+                  label: Question,
+                  name: question,
+                  widget: string,
+                  required: true,
+                }
+              - { label: Answer, name: answer, widget: string, required: true }
       - label: 'About'
         name: 'about'
-        file: 'content/about.md'
+        file: 'content/about.json'
         format: 'frontmatter'
         fields:
-          - { label: Heading, name: aboutHeading, widget: string }
-          - { label: Lead, name: aboutLead, widget: string }
-          - { label: Image1, name: aboutImage1, widget: image }
-          - { label: Image2, name: aboutImage2, widget: image }
-          - { label: Image3, name: aboutImage3, widget: image }
-          - { label: Image4, name: aboutImage4, widget: image }
-          - { label: Image5, name: aboutImage5, widget: image }
+          - { label: 'Title', name: 'title', widget: 'string', required: true }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Image 1',
+              name: 'aboutImg1',
+              widget: 'image',
+              required: true,
+            }
+          - {
+              label: 'Image 2',
+              name: 'aboutImg2',
+              widget: 'image',
+              required: true,
+            }
+          - {
+              label: 'Image 3',
+              name: 'aboutImg3',
+              widget: 'image',
+              required: true,
+            }
+          - {
+              label: 'Image 4',
+              name: 'aboutImg5',
+              widget: 'image',
+              required: true,
+            }
+          - {
+              label: 'Image 5',
+              name: 'aboutImg5',
+              widget: 'image',
+              required: true,
+            }
+          - {
+              label: 'Content',
+              name: 'body',
+              widget: 'markdown',
+              required: false,
+            }
+
   - name: 'Pages'
     label: 'Pages'
     folder: 'content'
     create: true
     format: 'frontmatter'
+    filter: { field: 'customPage', value: false }
     slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
@@ -88,6 +134,7 @@ collections:
     folder: 'content/plan-your-visit'
     create: true
     format: 'frontmatter'
+    filter: { field: 'customPage', value: false }
     slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
@@ -98,11 +145,13 @@ collections:
           required: false,
         }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
+
   - name: 'legal'
     label: 'Legal'
     folder: 'content/legal'
     create: true
     format: 'frontmatter'
+    filter: { field: 'customPage', value: false }
     slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }

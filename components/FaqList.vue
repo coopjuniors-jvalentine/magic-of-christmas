@@ -33,7 +33,7 @@
                 category === selectedCategory
                   ? 'border-blue-400 text-blue-400'
                   : 'border-transparent text-white hover:border-m-blue-300 hover:text-m-blue-200',
-                'w-1/3 border-b-2 py-4 px-1 text-center text-sm font-medium',
+                'w-1/3 border-b-2 py-4 px-1 text-center text-xl font-display',
               ]"
               @click="changeCategory(category)"
               :aria-current="category === selectedCategory ? 'page' : undefined"
@@ -54,9 +54,9 @@
         <button
           type="button"
           @click="toggle(index)"
-          class="text-m-blue-300 hover:text-white p-4 flex items-center justify-between w-full"
+          class="text-m-blue-300 hover:text-white p-4 flex items-center justify-between w-full text-left"
         >
-          <h2 class="text-white">{{ item.question }}</h2>
+          <h2 class="text-white font-display text-lg md:text-xl">{{ item.question }}</h2>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -78,7 +78,7 @@
           class="border-t border-m-blue-400"
           v-if="openedIndices.includes(index)"
         >
-          <p class="p-4 max-w-prose leading-7 text-sm text-m-blue-200">
+          <p class="p-4 max-w-prose leading-7 text-m-blue-200">
             {{ item.answer }}
           </p>
         </div>

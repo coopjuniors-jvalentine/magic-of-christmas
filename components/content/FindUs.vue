@@ -31,7 +31,7 @@
         <div>
           <div class="lg:max-w-lg">
             <h1
-              class="font-display text-pretty text-4xl tracking-tight text-m-blue-100 sm:text-6xl"
+              class="font-display text-pretty text-4xl tracking-tight text-white sm:text-6xl"
             >
               Find Us
             </h1>

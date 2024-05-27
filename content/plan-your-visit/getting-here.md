@@ -1,6 +1,7 @@
 ---
 title: 'Getting Here'
 description: 'Information about the Magic of Christmas event, the venue and ticketing.'
+customPage: false
 ---
 
 ::FindUs

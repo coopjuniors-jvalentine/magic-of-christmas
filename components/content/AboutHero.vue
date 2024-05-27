@@ -9,17 +9,17 @@
             >
               <div class="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                 <h1
-                  class="font-display text-pretty text-4xl tracking-tight text-m-blue-100 sm:text-6xl"
+                  class="font-display text-pretty text-4xl tracking-tight text-white sm:text-6xl"
                 >
-                  {{ heading }}
+                  <ContentSlot :use="$slots.heading" unwrap="p" />
                 </h1>
                 <p
                   class="font-serif text-pretty mt-6 text-xl leading-8 text-m-blue-100 sm:max-w-md lg:max-w-none"
                 >
-                  {{ lead }}
+                <ContentSlot :use="$slots.lead" unwrap="p" />
                 </p>
-                <div class="mt-6 font-serif prose prose-invert lg:prose-lg">
-                  <ContentSlot :use="$slots.default" />
+                <div class="mt-6 font-serif prose prose-invert lg:prose-lg relative max-w-full sm:max-w-md lg:max-w-none">
+                  <ContentSlot :use="$slots.about" />
                 </div>
               </div>
               <div
@@ -97,14 +97,6 @@
 <script>
 export default {
   props: {
-    heading: {
-      type: String,
-      required: true,
-    },
-    lead: {
-      type: String,
-      required: true,
-    },
     image1: {
       type: String,
       required: true,
