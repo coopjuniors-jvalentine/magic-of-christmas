@@ -25,21 +25,6 @@ Presented by the award-winning Co-op Juniors Theatre Company who brought you
 *Christmas Spectacular!* for the last 18 years. 
 
 Featuring an unforgettable soundtrack, exhilarating dance numbers, whimsical costumes, vibrant sets and playful puppets, *Magic of Christmas* promises to be a Christmas celebration like no other.
-
-#image1
-/img/imgage-1.jpg
-
-#image2
-/img/imgage-2.jpg
-
-#image3
-/img/imgage-3.jpg
-
-#image4
-/img/imgage-4.jpg
-
-#image5
-/img/imgage-5.jpg
 ::
 
 <div class="font-serif mx-auto max-w-prose px-8 pb-32 prose prose-invert lg:prose-lg">
