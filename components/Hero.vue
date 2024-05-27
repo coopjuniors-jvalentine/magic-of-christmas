@@ -11,6 +11,7 @@
         src="/img/MagicOfChristmas-3D.png"
         width="1000"
         height="693"
+        sizes="672px"
         :placeholder="[200, 140, 75, 5]"
         format="webp"
         alt="The Magic of Christmas"
