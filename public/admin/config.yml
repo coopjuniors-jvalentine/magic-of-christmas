@@ -42,8 +42,6 @@ collections:
         name: 'faqs'
         file: 'content/plan-your-visit/_faq-items.json'
         format: 'json'
-        editor:
-          preview: false
         widget: 'list'
         allow_add: true
         summary: '{{fields.category}} - {{fields.question}}'
