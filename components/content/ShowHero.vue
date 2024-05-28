@@ -15,9 +15,7 @@
           >
             <ContentSlot :use="$slots.lead" unwrap="p" />
           </p>
-          <div
-            class="mt-6 font-serif prose prose-invert lg:prose-lg relative"
-          >
+          <div class="mt-6 font-serif prose prose-invert lg:prose-lg relative">
             <ContentSlot :use="$slots.about" />
           </div>
         </div>
