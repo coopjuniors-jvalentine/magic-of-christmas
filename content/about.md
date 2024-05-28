@@ -11,7 +11,7 @@ aboutImg4: /img/image-4.jpg
 aboutImg5: /img/image-5.jpg
 ---
 
-::AboutHero{:image1="aboutImg1" :image2="aboutImg2" :image3="aboutImg3" :image4="aboutImg4" :image5="aboutImg5"}
+::ShowHero
 #heading
 Join us as we whisk you away on a captivating adventure
 
@@ -27,13 +27,18 @@ Presented by the award-winning Co-op Juniors Theatre Company who brought you
 Featuring an unforgettable soundtrack, exhilarating dance numbers, whimsical costumes, vibrant sets and playful puppets, *Magic of Christmas* promises to be a Christmas celebration like no other.
 ::
 
+::CompanyHero{:image1="aboutImg1" :image2="aboutImg2" :image3="aboutImg3" :image4="aboutImg4" :image5="aboutImg5"}
+#heading
+A musical theatre experience you will never forget
+
+#lead
+With a heritage of 80 years, the Co-op Juniors Theatre Company is one of the largest youth musical theatre groups in the UK
+
+#about
+We work with people aged 7-21 from all backgrounds to produce vibrant, innovative and original theatre across east Suffolk’s top venues.
+::
+
 <div class="font-serif mx-auto max-w-prose px-8 pb-32 prose prose-invert lg:prose-lg">
-
-## The Company
-
-**A musical theatre experience you will never forget**
-
-With a heritage of 80 years, the Co-op Juniors Theatre Company is one of the largest youth musical theatre groups in the UK. We work with people aged 7-21 from all backgrounds to produce vibrant, innovative and original theatre across east Suffolk’s top venues.
 
 ## Have A Question?
 
