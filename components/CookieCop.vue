@@ -170,7 +170,7 @@
                   </button>
                   <button
                     type="button"
-                    class="inline-flex w-full justify-center rounded-md bg-m-blue-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400"
+                    class="mt-3 inline-flex w-full justify-center rounded-md bg-m-blue-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400 sm:mt-0"
                     @click="acceptAll"
                   >
                     Accecpt All
