@@ -55,7 +55,7 @@
         class="mt-12 pt-12 border-t border-m-blue-600 md:flex md:items-center md:justify-between lg:px-8"
       >
         <div class="flex justify-center space-x-6 md:order-2">
-          <a href="#" class="text-m-blue-300 hover:text-m-blue-200">
+          <a href="https://www.facebook.com/coopjuniors" class="text-m-blue-300 hover:text-m-blue-200">
             <span class="sr-only">Facebook</span>
             <svg
               class="h-6 w-6"
@@ -71,7 +71,7 @@
             </svg>
           </a>
 
-          <a href="#" class="text-m-blue-300 hover:text-m-blue-200">
+          <a href="https://twitter.com/coopjuniors" class="text-m-blue-300 hover:text-m-blue-200">
             <span class="sr-only">X</span>
             <svg
               class="h-6 w-6"
