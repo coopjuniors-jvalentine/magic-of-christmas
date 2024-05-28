@@ -18,7 +18,10 @@
         </svg>
       </div>
 
-      <button type="button" @click="clearSearch"
+      <button
+        type="button"
+        v-if="searchQuery"
+        @click="clearSearch"
         class="cursor-pointer absolute inset-y-0 right-0 flex items-center pr-3"
       >
         <svg
@@ -40,7 +43,7 @@
       />
     </div>
 
-    <div class="mb-12">
+    <div v-if="!searchQuery" class="mb-12">
       <nav class="grid grid-cols-1 sm:grid-cols-3 gap-4" aria-label="Tabs">
         <button
           type="button"
@@ -121,18 +124,15 @@ export default {
       return [...new Set(this.faqs.map(faq => faq.category))]
     },
     filteredFaqs() {
-      return this.faqs.filter(faq => {
-        const matchesCategory = faq.category === this.selectedCategory
-        if (!this.searchQuery) {
-          return matchesCategory
-        }
-
+      if (this.searchQuery) {
         const query = this.searchQuery.toLowerCase()
-        const matchesQuery =
-          faq.question.toLowerCase().includes(query) ||
-          faq.answer.toLowerCase().includes(query)
-        return matchesCategory && matchesQuery
-      })
+        return this.faqs.filter(
+          faq =>
+            faq.question.toLowerCase().includes(query) ||
+            faq.answer.toLowerCase().includes(query),
+        )
+      }
+      return this.faqs.filter(faq => faq.category === this.selectedCategory)
     },
   },
   methods: {
@@ -152,8 +152,8 @@ export default {
       }
     },
     clearSearch() {
-      this.searchQuery = '';
-    }
+      this.searchQuery = ''
+    },
   },
   mounted() {
     if (this.categories.length > 0) {
