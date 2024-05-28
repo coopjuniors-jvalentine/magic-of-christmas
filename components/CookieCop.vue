@@ -1,8 +1,25 @@
 <template>
   <div>
     <div
+      class="z-50 fixed right-4 bottom-4 p-2 shadow-lg backdrop-blur-lg border border-m-blue-400 rounded-full text-m-blue-300 hover:text-m-blue-100"
+      v-if="!bannerOpen && !modalOpen"
+      @click="modalOpen = true"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M510.52 255.82c-69.97-.85-126.47-57.69-126.47-127.86-70.17 0-127-56.49-127.86-126.45-27.26-4.14-55.13.3-79.72 12.82l-69.13 35.22a132.221 132.221 0 0 0-57.79 57.81l-35.1 68.88a132.645 132.645 0 0 0-12.82 80.95l12.08 76.27a132.521 132.521 0 0 0 37.16 72.96l54.77 54.76a132.036 132.036 0 0 0 72.71 37.06l76.71 12.15c27.51 4.36 55.7-.11 80.53-12.76l69.13-35.21a132.273 132.273 0 0 0 57.79-57.81l35.1-68.88c12.56-24.64 17.01-52.58 12.91-79.91zM176 368c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm32-160c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm160 128c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"
+        />
+      </svg>
+    </div>
+
+    <div
       v-if="bannerOpen"
-      class="z-50 font-serif fixed inset-x-0 bottom-0 flex flex-col justify-between gap-x-8 gap-y-4 bg-m-blue-500 p-6 ring-1 ring-gray-900/10 md:flex-row md:items-center lg:px-8"
+      class="z-50 font-serif fixed inset-x-0 bottom-0 flex flex-col justify-between gap-x-8 gap-y-4 backdrop-blur-lg p-6 ring-1 ring-white/25 md:flex-row md:items-center lg:px-8"
     >
       <p class="max-w-4xl text-pretty text-sm leading-6 text-m-blue-100">
         We use cookies and other similar technologies to enhance your browsing
@@ -24,14 +41,14 @@
         <button
           @click="rejectAll"
           type="button"
-          class="text-sm leading-6 text-m-blue-100"
+          class="text-sm leading-6 text-m-blue-100 hover:text-m-blue-300"
         >
           Reject all
         </button>
         <button
           @click="managePreferences"
           type="button"
-          class="text-sm leading-6 text-m-blue-100"
+          class="text-sm leading-6 text-m-blue-100 hover:text-m-blue-300"
         >
           Manage Preferences
         </button>
@@ -39,7 +56,10 @@
     </div>
 
     <HeadlessTransitionRoot as="template" :show="modalOpen">
-      <HeadlessDialog class="relative z-50 font-serif" @close="restoreBanner">
+      <HeadlessDialog
+        class="relative z-50 font-serif"
+        @close="modalOpen = false"
+      >
         <HeadlessTransitionChild
           as="template"
           enter="ease-out duration-300"
@@ -74,14 +94,14 @@
                   <div class="text-center">
                     <HeadlessDialogTitle
                       as="h3"
-                      class="text-base font-semibold leading-6 text-gray-900"
+                      class="text-2xl font-display text-m-blue-700"
                       >Manage Cookies</HeadlessDialogTitle
                     >
                     <div class="mt-2">
-                      <p class="text-sm text-gray-500">
+                      <p class="text-sm text-gray-700">
                         We use cookies and other similar technologies to enhance
                         your browsing experience, serve personalised ads or
-                        content, and analyse our traffic.<br />See our
+                        content, and analyse our traffic. See our
                         <NuxtLink
                           to="/legal/cookies"
                           class="font-semibold text-m-blue-300"
@@ -101,7 +121,6 @@
                       <HeadlessSwitchLabel
                         as="span"
                         class="text-sm font-medium leading-6 text-gray-900"
-                        
                       >
                         {{ cookie.name }}
                       </HeadlessSwitchLabel>
@@ -137,10 +156,10 @@
                 >
                   <button
                     type="button"
-                    class="inline-flex w-full justify-center rounded-md bg-m-blue-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400"
-                    @click="acceptAll"
+                    class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0"
+                    @click="rejectAll"
                   >
-                    Accecpt All
+                    Reject All
                   </button>
                   <button
                     type="button"
@@ -151,10 +170,10 @@
                   </button>
                   <button
                     type="button"
-                    class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0"
-                    @click="rejectAll"
+                    class="inline-flex w-full justify-center rounded-md bg-m-blue-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400"
+                    @click="acceptAll"
                   >
-                    Reject All
+                    Accecpt All
                   </button>
                 </div>
               </HeadlessDialogPanel>
@@ -173,6 +192,7 @@ const cookies = [
     description: 'Tracks website usage.',
     enabled: false,
     required: false,
+    targetedCookies: [],
   },
   {
     id: 'm',
@@ -180,6 +200,7 @@ const cookies = [
     description: 'Used for campaign tracking.',
     enabled: false,
     required: false,
+    targetedCookies: [],
   },
   {
     id: 'f',
@@ -187,6 +208,7 @@ const cookies = [
     description: 'Ensures website functions correctly.',
     enabled: true,
     required: true,
+    targetedCookies: [],
   },
 ]
 
@@ -249,6 +271,11 @@ export default {
       })
       this.bannerOpen = false
     }
+  },
+  watch: {
+    $route() {
+      this.modalOpen = false
+    },
   },
 }
 </script>
