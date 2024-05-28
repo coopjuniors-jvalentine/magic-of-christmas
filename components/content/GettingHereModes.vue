@@ -5,7 +5,7 @@
         class="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl sm:grid-cols-2"
       >
         <div class="flex flex-col bg-white/5 p-8">
-          <dt class="text-white text-lg">
+          <dt class="text-white font-display text-lg sm:text-xl lg:text-2xl">
             <ContentSlot :use="$slots.carName" unwrap="p" />
           </dt>
           <dd class="mt-4 prose prose-invert lg:prose-lg">
@@ -14,7 +14,7 @@
         </div>
 
         <div class="flex flex-col bg-white/5 p-8">
-          <dt class="text-white text-lg">
+          <dt class="text-white font-display text-lg sm:text-xl lg:text-2xl">
             <ContentSlot :use="$slots.trainName" unwrap="p" />
           </dt>
           <dd class="mt-4 prose prose-invert lg:prose-lg">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="flex flex-col bg-white/5 p-8">
-          <dt class="text-white text-lg">
+          <dt class="text-white font-display text-lg sm:text-xl lg:text-2xl">
             <ContentSlot :use="$slots.taxiName" unwrap="p" />
           </dt>
           <dd class="mt-4 prose prose-invert lg:prose-lg">
@@ -32,7 +32,7 @@
         </div>
 
         <div class="flex flex-col bg-white/5 p-8">
-          <dt class="text-white text-lg">
+          <dt class="text-white font-display text-lg sm:text-xl lg:text-2xl">
             <ContentSlot :use="$slots.busName" unwrap="p" />
           </dt>
           <dd class="mt-4 prose prose-invert lg:prose-lg">
