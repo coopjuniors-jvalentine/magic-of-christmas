@@ -34,11 +34,10 @@
                     <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
                       :src="image1"
-                      width="1920"
+                      width="720"
                       height="1280"
-                      sizes="528px"
-                      fit="inside"
-                      :placeholder="[192, 128, 75, 5]"
+                      sizes="264px"
+                      :placeholder="[128, 72, 75, 5]"
                       format="webp"
                       alt=""
                     />
@@ -55,11 +54,10 @@
                     <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
                       :src="image2"
-                      width="1920"
+                      width="720"
                       height="1280"
-                      sizes="528px"
-                      fit="inside"
-                      :placeholder="[192, 128, 75, 5]"
+                      sizes="264px"
+                      :placeholder="[128, 72, 75, 5]"
                       format="webp"
                       alt=""
                     />
@@ -71,11 +69,10 @@
                     <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
                       :src="image3"
-                      width="1920"
+                      width="720"
                       height="1280"
-                      sizes="528px"
-                      fit="inside"
-                      :placeholder="[192, 128, 75, 5]"
+                      sizes="264px"
+                      :placeholder="[128, 72, 75, 5]"
                       format="webp"
                       alt=""
                     />
@@ -89,11 +86,10 @@
                     <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
                       :src="image4"
-                      width="1920"
+                      width="720"
                       height="1280"
-                      sizes="528px"
-                      fit="inside"
-                      :placeholder="[192, 128, 75, 5]"
+                      sizes="264px"
+                      :placeholder="[128, 72, 75, 5]"
                       format="webp"
                       alt=""
                     />
@@ -105,11 +101,10 @@
                     <NuxtImg
                       class="aspect-[2/3] w-full rounded-xl bg-gray-white/10 object-cover shadow-lg"
                       :src="image5"
-                      width="1920"
+                      width="720"
                       height="1280"
-                      sizes="528px"
-                      fit="inside"
-                      :placeholder="[192, 128, 75, 5]"
+                      sizes="264px"
+                      :placeholder="[128, 72, 75, 5]"
                       format="webp"
                       alt=""
                     />
