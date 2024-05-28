@@ -138,7 +138,7 @@ export default {
     navClass() {
       return {
         '': this.isTransparent,
-        'backdrop-blur-lg': !this.isTransparent,
+        'backdrop-blur-lg ring-1 ring-white/25': !this.isTransparent,
       }
     },
   },
