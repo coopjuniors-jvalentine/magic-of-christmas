@@ -186,22 +186,22 @@
 </template>
 <script>
 const cookies = [
-  {
-    id: 'a',
-    name: 'Analytics Cookies',
-    description: 'Tracks website usage.',
-    enabled: false,
-    required: false,
-    targetedCookies: [],
-  },
-  {
-    id: 'm',
-    name: 'Marketing Cookies',
-    description: 'Used for campaign tracking.',
-    enabled: false,
-    required: false,
-    targetedCookies: [],
-  },
+  // {
+  //   id: 'a',
+  //   name: 'Analytics Cookies',
+  //   description: 'Tracks website usage.',
+  //   enabled: false,
+  //   required: false,
+  //   targetedCookies: [],
+  // },
+  // {
+  //   id: 'm',
+  //   name: 'Marketing Cookies',
+  //   description: 'Used for campaign tracking.',
+  //   enabled: false,
+  //   required: false,
+  //   targetedCookies: [],
+  // },
   {
     id: 'f',
     name: 'Functional Cookies',
