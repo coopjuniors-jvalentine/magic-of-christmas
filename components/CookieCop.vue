@@ -1,7 +1,8 @@
 <template>
   <div>
-    <div
-      class="z-50 fixed right-4 bottom-4 p-2 shadow-lg backdrop-blur-lg border border-m-blue-400 rounded-full text-m-blue-300 hover:text-m-blue-100"
+    <button
+      aria-label="Manage Cookies"
+      class="z-50 fixed right-4 bottom-4 p-2 shadow-lg backdrop-blur-lg ring-1 ring-white/25 rounded-full text-m-blue-300 hover:text-m-blue-100"
       v-if="!bannerOpen && !modalOpen"
       @click="modalOpen = true"
     >
@@ -15,7 +16,7 @@
           d="M510.52 255.82c-69.97-.85-126.47-57.69-126.47-127.86-70.17 0-127-56.49-127.86-126.45-27.26-4.14-55.13.3-79.72 12.82l-69.13 35.22a132.221 132.221 0 0 0-57.79 57.81l-35.1 68.88a132.645 132.645 0 0 0-12.82 80.95l12.08 76.27a132.521 132.521 0 0 0 37.16 72.96l54.77 54.76a132.036 132.036 0 0 0 72.71 37.06l76.71 12.15c27.51 4.36 55.7-.11 80.53-12.76l69.13-35.21a132.273 132.273 0 0 0 57.79-57.81l35.1-68.88c12.56-24.64 17.01-52.58 12.91-79.91zM176 368c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm32-160c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32zm160 128c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"
         />
       </svg>
-    </div>
+    </button>
 
     <div
       v-if="bannerOpen"
@@ -182,6 +183,46 @@
         </div>
       </HeadlessDialog>
     </HeadlessTransitionRoot>
+
+    <div
+      v-if="doNotTrackOpen"
+      class="z-50 pointer-events-none fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8"
+    >
+      <div
+        class="pointer-events-auto flex items-center justify-between gap-x-6 backdrop-blur-lg ring-1 ring-white/25 px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5"
+      >
+        <p class="text-sm leading-6 text-white">
+          <strong class="font-semibold">Browser Signal Acknowledged</strong>
+          <svg
+            viewBox="0 0 2 2"
+            class="mx-2 inline h-0.5 w-0.5 fill-current"
+            aria-hidden="true"
+          >
+            <circle cx="1" cy="1" r="1" />
+          </svg>
+          We detected a Do Not Track or Global Privacy Control signal from your
+          browser. You will not be tracked and your information won't be sold or
+          shared.
+        </p>
+        <button
+          type="button"
+          class="-m-1.5 flex-none p-1.5"
+          @click="doNotTrackOpen = false"
+        >
+          <span class="sr-only">Dismiss</span>
+          <svg
+            class="h-5 w-5 text-white"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -217,6 +258,7 @@ export default {
     return {
       bannerOpen: true,
       modalOpen: false,
+      doNotTrackOpen: false,
       cookies: cookies,
     }
   },
@@ -260,6 +302,13 @@ export default {
     },
   },
   mounted() {
+    if (navigator.doNotTrack || navigator.globalPrivacyControl) {
+      this.doNotTrackOpen = true
+      this.bannerOpen = false
+      this.modalOpen = false
+      this.rejectAll()
+      return
+    }
     const storedPreferences = localStorage.getItem('cookie-cop-preferences')
     if (storedPreferences) {
       const preferences = JSON.parse(storedPreferences)
