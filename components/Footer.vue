@@ -3,24 +3,34 @@
     class="text-white font-serif bg-m-blue-800 mt-24 px-8 py-24 border-t border-m-blue-600"
   >
     <div class="max-w-5xl mx-auto px-8">
-      <div
-        class="flex flex-wrap items-center justify-center space-x-4 md:space-x-8 space-y-4"
-      >
-        <img
-          class="max-h-16 md:max-h-20 lg:max-h-24"
-          src="/img/MagicOfChristmas.svg"
-          alt="Magic of Christmas"
-        />
-        <img
-          class="max-h-16 md:max-h-20 lg:max-h-24"
-          src="/img/CoopJuniors.svg"
-          alt="Co-op Juniors"
-        />
-        <img
-          class="max-h-16 md:max-h-20 lg:max-h-24"
-          src="/img/EOECoop.svg"
-          alt="East of England Co-operative Society"
-        />
+      <div class="grid grid-cols-2 items-center sm:grid-cols-3 gap-4 sm:gap-8">
+        <div class="flex items-center justify-center">
+          <img
+            class="max-h-16 md:max-h-20 lg:max-h-24"
+            src="/img/MagicOfChristmas.svg"
+            alt="Magic of Christmas"
+          />
+        </div>
+
+        <a class="flex items-center justify-center" href="#" target="_blank">
+          <img
+            class="max-h-16 md:max-h-20 lg:max-h-24 w-full"
+            src="/img/CoopJuniors.svg"
+            alt="Co-op Juniors"
+          />
+        </a>
+        <div class="flex items-center justify-center">
+          <img
+            class="max-h-16 md:max-h-20 lg:max-h-24"
+            src="/img/EOECoop.svg"
+            alt="East of England Co-operative Society"
+          />
+        </div>
+        <span
+          class="text-m-blue-300 text-xs text-center block cols-span-1 sm:col-span-3"
+          >The Co-op Juniors Theatre Company are grateful for the support of the
+          East of England Co-operative Society</span
+        >
       </div>
 
       <div
@@ -55,7 +65,10 @@
         class="mt-12 pt-12 border-t border-m-blue-600 md:flex md:items-center md:justify-between lg:px-8"
       >
         <div class="flex justify-center space-x-6 md:order-2">
-          <a href="https://www.facebook.com/coopjuniors" class="text-m-blue-300 hover:text-m-blue-200">
+          <a
+            href="https://www.facebook.com/coopjuniors"
+            class="text-m-blue-300 hover:text-m-blue-200"
+          >
             <span class="sr-only">Facebook</span>
             <svg
               class="h-6 w-6"
@@ -71,7 +84,10 @@
             </svg>
           </a>
 
-          <a href="https://twitter.com/coopjuniors" class="text-m-blue-300 hover:text-m-blue-200">
+          <a
+            href="https://twitter.com/coopjuniors"
+            class="text-m-blue-300 hover:text-m-blue-200"
+          >
             <span class="sr-only">X</span>
             <svg
               class="h-6 w-6"
@@ -87,7 +103,7 @@
         </div>
         <div class="mt-8 md:order-1 md:mt-0">
           <p class="text-center text-xs leading-5 text-m-blue-300">
-            &copy; 2024 Co-op Juniors Theatre Company, Inc. All rights reserved.
+            &copy; 2024 Co-op Juniors Theatre Company. All rights reserved.
           </p>
         </div>
       </div>

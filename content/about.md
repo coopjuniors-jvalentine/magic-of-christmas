@@ -35,7 +35,7 @@ A musical theatre experience you will never forget
 With a heritage of 80 years, the Co-op Juniors Theatre Company is one of the largest youth musical theatre groups in the UK
 
 #about
-We work with people aged 7-21 from all backgrounds to produce vibrant, innovative and original theatre across east Suffolk’s top venues.
+We work with people aged 7-21 from all backgrounds to produce vibrant, innovative and original theatre across east Suffolk’s top venues. Find out more on the [Co-op Juniors website](https://www.coopjuniors.co.uk){:target="_blank"}.
 ::
 
 <div class="font-serif mx-auto max-w-prose px-8 pb-32 prose prose-invert lg:prose-lg">

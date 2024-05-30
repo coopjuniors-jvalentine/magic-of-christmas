@@ -46,11 +46,13 @@
             <div class="mt-10 flex items-center gap-x-6">
               <a
                 href="https://www.google.com/maps/place/Ipswich+IP3+8UH/"
+                target="_blank"
                 class="rounded-md bg-m-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400"
                 >Open on Google Maps</a
               >
               <a
                 href="https://what3words.com/remaining.providing.clouds"
+                target="_blank"
                 class="text-sm font-semibold leading-6 text-m-blue-200"
                 >What3Words <span aria-hidden="true">→</span></a
               >

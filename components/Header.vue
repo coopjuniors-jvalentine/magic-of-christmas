@@ -1,52 +1,54 @@
 <template>
-  <header :class="navClass" class="fixed top-0 w-full z-50 font-serif">
-    <nav
-      class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-      aria-label="Global"
-    >
-      <div class="flex lg:flex-1">
-        <NuxtLink
-          to="/buy-tickets"
-          class="rounded-md bg-m-blue-400 px-3 py-2 text-sm text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400"
-        >
-          Buy Tickets
-        </NuxtLink>
-      </div>
-      <div class="flex lg:hidden">
-        <button
-          @click="openMenu"
-          type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-m-blue-300"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
-      </div>
-      <div class="hidden lg:flex lg:gap-x-12">
-        <div v-for="item in navigation">
-          <Popover v-if="item.children" :item="item"></Popover>
+  <header class="fixed top-0 w-full z-50 font-serif">
+    <div :class="navClass">
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
           <NuxtLink
-            v-else
-            :to="item._path"
-            class="text-sm leading-6 text-white"
-            >{{ item.title }}</NuxtLink
+            to="/buy-tickets"
+            class="rounded-md bg-m-blue-400 px-3 py-2 text-sm text-white shadow-sm hover:bg-m-blue-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-m-blue-400"
           >
+            Buy Tickets
+          </NuxtLink>
         </div>
-      </div>
-    </nav>
+        <div class="flex lg:hidden">
+          <button
+            @click="openMenu"
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-m-blue-300"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <div v-for="item in navigation">
+            <Popover v-if="item.children" :item="item"></Popover>
+            <NuxtLink
+              v-else
+              :to="item._path"
+              class="text-sm leading-6 text-white"
+              >{{ item.title }}</NuxtLink
+            >
+          </div>
+        </div>
+      </nav>
+    </div>
     <!-- Mobile menu, show/hide based on menu open state. -->
     <div v-if="isMenuOpen" class="lg:hidden" role="dialog" aria-modal="true">
       <!-- Background backdrop, show/hide based on slide-over state. -->
