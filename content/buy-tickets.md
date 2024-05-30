@@ -5,12 +5,6 @@ navigation: false
 customPage: false
 ---
 
-
-::TtEmbed
-This is where the TicketTaylor embed will go
-::
-
-
 ## Ticket Prices
 
 |                                  | Band A | Band B | Band C |
