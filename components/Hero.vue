@@ -16,7 +16,7 @@
         format="webp"
         alt="The Magic of Christmas"
       />
-      <h2
+      <h2 v-if="showSubheading"
         class="font-display mt-12 text-3xl font-medium tracking-tight text-m-blue-50 sm:text-4xl"
       >
         {{ subheading }}
@@ -120,6 +120,10 @@ export default {
       default:
         HERO_SETTINGS.subheading ||
         'Journey to another world where your Christmas wishes come true!',
+    },
+    showSubheading: {
+      type: Boolean,
+      default: true
     },
     enableButton: {
       type: Boolean,
