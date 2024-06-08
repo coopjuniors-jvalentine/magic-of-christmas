@@ -55,7 +55,11 @@
         class="flex mt-6 text-xs text-m-blue-300 items-center justify-center space-x-8"
       >
         <NuxtLink to="/legal/cookies">Cookies</NuxtLink>
-        <NuxtLink to="/legal/privacy">Privacy</NuxtLink>
+        <a
+          href="https://coopjuniors.co.uk/privacy/privacy-information-for-the-public/"
+          target="_blank"
+          >Privacy</a
+        >
         <NuxtLink to="/legal/terms-and-conditions"
           >Terms and Conditions</NuxtLink
         >

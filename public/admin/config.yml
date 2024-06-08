@@ -153,7 +153,7 @@ collections:
   - name: 'legal'
     label: 'Legal'
     folder: 'content/legal'
-    create: true
+    create: false
     format: 'frontmatter'
     filter: { field: 'customPage', value: false }
     slug: '{{slug}}'
