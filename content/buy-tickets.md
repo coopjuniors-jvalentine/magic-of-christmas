@@ -1,6 +1,8 @@
 ---
 title: Buy Tickets
-description: This page is odd.
+description: Book tickets for Co-op Juniors' Magic of Christmas at Trinity Park.
+  Prices from £12-£26, with special rates for under-16s, disabled patrons with
+  free companion tickets, and group discounts. Fully accessible Big Top venue.
 navigation: false
 customPage: false
 ---
