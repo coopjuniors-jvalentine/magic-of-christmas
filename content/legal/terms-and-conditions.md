@@ -2,10 +2,11 @@
 title: Terms & Conditions
 customPage: false
 ---
-
 ## Refunds and returns
 
 All tickets are non-refundable. However, we may be able to exchange your tickets for another performance. Please email [boxoffice@coopjuniors.co.uk](mailto:boxoffice@coopjuniors.co.uk) with your requests and we will do our best to accommodate you, subject to availability.
+
+If we are sold out, we will offer to resell your tickets. If we are able to resell your tickets, we will issue a refund. Any refund will be subject to a £1.50 administration fee per ticket.
 
 In the event a performance is cancelled or postponed our box office will endeavour to contact our audience members as soon as possible, via contact details provided at the time of booking. Please ensure that your contact details are correct at the point of booking.
 
@@ -52,4 +53,3 @@ Child tickets are only valid for those under 16 at the time of the performance.
 By attending audience members give their consent to filming, photography and sound recording of themselves as members of the audience. The Co-op Juniors will own the copyright of such material and may use such films/photographs/recordings for any purpose, including commercial purposes, without payment or further notification.
 
 The Co-op Juniors will not be responsible for any injury or loss, theft or damage of audience members' personal belongings, other than that caused as a result of negligence or other breach of statutory duty. Personal arrangements, including but not limited to, travel, accommodation and subsistence relating to the performance are made entirely at audience members' own risk and the Co-op Juniors shall not be liable for any losses incurred from these arrangements. Nothing in these terms and conditions seeks to exclude any liability of the Co-op Juniors for death or personal injury caused by its negligence or other type of liability which cannot by law be excluded or limited.
-
