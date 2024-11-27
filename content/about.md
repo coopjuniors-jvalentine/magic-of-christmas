@@ -5,10 +5,10 @@ description: Join us as we whisk you away on a captivating adventure filled with
   stunning visual surprises and mesmerising performances in this brand new Big
   Top spectacle, perfect for all ages!
 aboutImg1: /img/magicofchristmas2024-8.jpg
-aboutImg2: /img/image-2.jpg
-aboutImg3: /img/image-3.jpg
-aboutImg4: /img/image-4.jpg
-aboutImg5: /img/image-5.jpg
+aboutImg2: /img/magicofchristmas2024-26.jpg
+aboutImg3: /img/magicofchristmas2024-36.jpg
+aboutImg4: /img/magicofchristmas2024-63.jpg
+aboutImg5: /img/magicofchristmas2024-49.jpg
 ---
 ::ShowHero
 #heading
