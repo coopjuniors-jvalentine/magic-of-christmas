@@ -1,16 +1,15 @@
 ---
-title: About
-description: "Join us as we whisk you away on a captivating adventure filled
-  with stunning visual surprises and mesmerising performances in this brand new
-  Big Top spectacle, perfect for all ages!"
 customPage: true
-aboutImg1: /img/image-1.jpg
+title: About
+description: Join us as we whisk you away on a captivating adventure filled with
+  stunning visual surprises and mesmerising performances in this brand new Big
+  Top spectacle, perfect for all ages!
+aboutImg1: /img/magicofchristmas2024-8.jpg
 aboutImg2: /img/image-2.jpg
 aboutImg3: /img/image-3.jpg
 aboutImg4: /img/image-4.jpg
 aboutImg5: /img/image-5.jpg
 ---
-
 ::ShowHero
 #heading
 Join us as we whisk you away on a captivating adventure
