@@ -65,6 +65,27 @@ collections:
                   required: true,
                 }
               - { label: Answer, name: answer, widget: string, required: true }
+      - label: 'Image Gallery'
+        name: 'imageGallery'
+        file: 'content/_gallery-images.json'
+        format: 'json'
+        editor:
+          preview: false
+        widget: 'list'
+        allow_add: true
+        summary: '{{fields.alt}}'
+        fields:
+          - label: 'Images'
+            name: 'images'
+            widget: 'list'
+            fields:
+              - { label: Image, name: src, widget: image, required: true }
+              - {
+                  label: 'Alt Text',
+                  name: alt,
+                  widget: string,
+                  required: false,
+                }
       - label: 'About'
         name: 'about'
         file: 'content/about.md'

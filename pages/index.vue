@@ -13,4 +13,5 @@
       Buy Tickets
     </NuxtLink>
   </div>
+  <ImageGallery />  
 </template>
