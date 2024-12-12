@@ -2,30 +2,37 @@
   "images": [
     {
       "src": "/img/001.jpg",
+      "position": "object-center",
       "alt": "A dynamic dance sequence from a stage performance where performers in red and white jester costumes form a circle, lifting one performer who reaches skyward against a deep blue curtain backdrop"
     },
     {
       "src": "/img/002.jpg",
+      "position": "object-center",
       "alt": "A theatrical scene where performers in bright red jester costumes with white accents interact with a character in denim overalls and a backpack on a stage lit with blue lighting"
     },
     {
       "src": "/img/008.jpg",
+      "position": "object-center",
       "alt": "An energetic dance number featuring performers in colorful carnival costumes and monkey-topped hats surrounding a large brown teddy bear character center stage, with a royal blue curtain backdrop"
     },
     {
       "src": "/img/009.jpg",
+      "position": "object-center",
       "alt": "A theatrical ensemble scene with performers in toy soldier and polka-dot dress costumes arranged in formation, featuring decorative toy blocks and a stylized sun set piece above the stage"
     },
     {
       "src": "/img/010.jpg",
+      "position": "object-top",
       "alt": "A dramatic solo scene of a performer in denim overalls and a blue backpack, holding a teddy bear while standing on a red-lit stage, creating a striking silhouette against the dark background"
     },
     {
       "src": "/img/021.jpg",
+      "position": "object-center",
       "alt": "A line of performers in white knit caps and white costumes with copper-colored sashes hold up illuminated snowflake props against a dark stage. Their costumes feature decorative gold ribbons, and they wear white sneakers as they perform in synchronized poses under blue lighting"
     },
     {
       "src": "/img/022.jpg",
+      "position": "object-center",
       "alt": "A romantic scene between two performers in snowman costumes - one in a suit and one in a tulle dress holding orange flowers - surrounded by other snowman characters and performers in red and white costumes. The snowmen wear large white spherical head pieces with carrot noses and beaded smiles"
     }
   ]

@@ -73,7 +73,7 @@ collections:
           preview: false
         widget: 'list'
         allow_add: true
-        summary: '{{fields.alt}}'
+        summary: 'fields.images.alt'
         fields:
           - label: 'Images'
             name: 'images'
@@ -84,6 +84,25 @@ collections:
                   label: 'Alt Text',
                   name: alt,
                   widget: string,
+                  required: false,
+                }
+              - {
+                  label: Position,
+                  name: position,
+                  widget: select,
+                  options:
+                    [
+                      'object-bottom',
+                      'object-center',
+                      'object-left',
+                      'object-left-bottom',
+                      'object-left-top',
+                      'object-right',
+                      'object-right-bottom',
+                      'object-right-top',
+                      'object-top',
+                    ],
+                  default: 'object-center',
                   required: false,
                 }
       - label: 'About'

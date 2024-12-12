@@ -4,6 +4,7 @@
       :src="selectedImage.src"
       :alt="selectedImage.alt"
       class="aspect-[4/3] w-full object-cover rounded-lg"
+      :class="selectedImage.position"
     />
 
     <div class="grid grid-cols-4 lg:grid-cols-7 gap-3 lg:gap-6 mt-4">
@@ -12,8 +13,8 @@
           :src="image.src"
           :alt="image.alt"
           @click="selectedImage = image"
-          class="aspect-square w-full object-cover rounded-lg cursor-pointer "
-          :class="{'border-white border-2': image == selectedImage}"
+          class="aspect-square w-full object-cover rounded-lg cursor-pointer"
+          :class="{ 'border-white border-2': image == selectedImage }"
         />
       </div>
     </div>
